@@ -5,20 +5,20 @@ import Total from './Total'
 const App = () => {
   const course = 'CSIT340'
 
-  const part1 = {
-  name: 'Information Management 2',
-  exercises: 3
-  }
-
-  const part2 = {
-    name: 'Application Development',
-    exercises: 3
-  }
-
-  const part3 = {
-    name: 'Industry Elective',
-    exercises: 3
-  }
+  const parts = [
+    {
+      name: 'Information Management',
+      exercises: 3
+    },
+    {
+      name: 'Application Development',
+      exercises: 3
+    },
+    {
+      name: 'Industry Elective',
+      exercises: 3
+    }
+  ]
 
   return (
     <div>

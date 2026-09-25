@@ -1,38 +1,40 @@
 import Header from './Header'
 import Content from './Content'
 import Total from './Total'
+import Footer from './Footer'
+import './App.css'
 
 const App = () => {
-  const course = 'CSIT340'
-
-  const parts = [
-    {
-      name: 'Information Management',
-      exercises: 3
-    },
-    {
-      name: 'Application Development',
-      exercises: 3
-    },
-    {
-      name: 'Industry Elective',
-      exercises: 3
-    }
-  ]
+  const course = {
+    name: 'CIT-U',
+    parts: [
+      {
+        name: 'Information Management II',
+        exercises: 3
+      },
+      {
+        name: 'Application Development',
+        exercises: 3
+      },
+      {
+        name: 'Industry Elective',
+        exercises: 3
+      }
+    ]
+  }
 
   return (
-    <div>
-      <Header course={course} />
+    <div className="app">
+      <main className="course-card">
+        <Header course={course.name} />
+        <Content parts={course.parts} />
+        <Total parts={course.parts} />
+      </main>
 
-      <Content
-        part1={part1}
-        part2={part2}
-        part3={part3}
-      />
-      <Total
-      part1={part1}
-      part2={part2}
-      part3={part3}
+      <Footer
+        name="Cedric Villareal"
+        courseCode="CSIT340"
+        section="G6"
       />
     </div>
   )

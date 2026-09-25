@@ -1,6 +1,15 @@
 const Header = ({ course }) => {
   return (
-    <h1>{course}</h1>
+    <header className="header">
+      <div className="header-icon">
+        🎓
+      </div>
+
+      <div className="header-content">
+        <h1>{course}</h1>
+        <p>Course Information</p>
+      </div>
+    </header>
   )
 }
 
